@@ -4,13 +4,15 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { View, Text, ScrollView, StyleSheet, RefreshControl, TouchableOpacity, SafeAreaView, Platform } from 'react-native';
+import Constants from 'expo-constants';
 
 // ===================== Meta / API =====================
 const VERSION = 'v1.7.0-SPEC-LOOP';
 
-const ALPACA_KEY    = 'AKS3TBCTY4CFZ2LBK2GZ';
-const ALPACA_SECRET = 'fX1QUAM5x8FGeGcEneIrgTCQXRSwcZnoaxHC6QXM';
-const ALPACA_BASE_URL = 'https://api.alpaca.markets/v2';
+const EX = (Constants?.expoConfig?.extra) || (Constants?.manifest?.extra) || {};
+const ALPACA_KEY    = EX.APCA_API_KEY_ID;
+const ALPACA_SECRET = EX.APCA_API_SECRET_KEY;
+const ALPACA_BASE_URL = EX.APCA_API_BASE || 'https://paper-api.alpaca.markets/v2';
 
 const DATA_ROOT      = 'https://data.alpaca.markets/v1beta3/crypto';
 const DATA_LOCATIONS = ['us', 'global'];

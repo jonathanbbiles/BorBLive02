@@ -14,10 +14,14 @@ Setup
 
 npm install
 
-Copy .env.example to .env
+Copy .env.example to .env.local
 
 Start backend (Node.js Express server)
 
 Run: npm start (Expo)
 
 The app shows temporary trade messages using a built-in overlay notification.
+
+To enable the commit guard, run:
+
+git config core.hooksPath .git-hooks
