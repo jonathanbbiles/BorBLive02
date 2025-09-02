@@ -30,6 +30,13 @@ const HEADERS = {
   'Content-Type': 'application/json',
 };
 
+console.log('[Alpaca LIVE ENV]', {
+  base: ALPACA_BASE_URL,
+  keyPrefix: (ALPACA_KEY||'').slice(0,4),
+  hasSecret: Boolean(ALPACA_SECRET)
+});
+
+
 /* ===================== MONITORING HELPERS (PnL & Fees) ===================== */
 // Portfolio history & activities (monitoring only; no strategy changes)
 async function getPortfolioHistory({ period='1M', timeframe='1D' } = {}) {

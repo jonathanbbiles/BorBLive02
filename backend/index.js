@@ -12,7 +12,7 @@ app.use(express.json());
 
  
 
-const ALPACA_BASE_URL = 'https://api.alpaca.markets/v2';
+const ALPACA_BASE_URL = process.env.ALPACA_API_BASE || 'https://api.alpaca.markets/v2';
 
 const API_KEY = process.env.ALPACA_API_KEY;
 
