@@ -12,7 +12,7 @@ const VERSION = 'v1.7.0-SPEC-LOOP';
 const EX = (Constants?.expoConfig?.extra) || (Constants?.manifest?.extra) || {};
 const ALPACA_KEY    = EX.APCA_API_KEY_ID;
 const ALPACA_SECRET = EX.APCA_API_SECRET_KEY;
-const ALPACA_BASE_URL = EX.APCA_API_BASE || 'https://api.alpaca.markets';
+const ALPACA_BASE_URL = EX.APCA_API_BASE || 'https://api.alpaca.markets/v2';
 
 const DATA_ROOT      = 'https://data.alpaca.markets/v1beta3/crypto';
 const DATA_LOCATIONS = ['us', 'global'];
